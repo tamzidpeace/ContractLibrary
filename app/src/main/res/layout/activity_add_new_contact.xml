@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".AddNewContact">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/contact"
+        tools:ignore="ContentDescription" />
+
+    <!--Name Layout-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/person"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/name"
+            android:inputType="text"
+            tools:ignore="Autofill,HardcodedText" />
+    </LinearLayout>
+
+    <!--end of name layout-->
+
+    <!--Mobile No Layout-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/moibleno"
+            tools:ignore="Autofill,ContentDescription,HardcodedText"/>
+
+        <EditText
+            android:layout_width="304dp"
+            android:layout_height="50dp"
+            android:hint="@string/mobile_no"
+            android:inputType="phone"
+            tools:ignore="Autofill" />
+    </LinearLayout>
+
+    <!--end of Mobile No layout-->
+
+    <!--Name Layout-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/email"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:layout_width="304dp"
+            android:layout_height="50dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            tools:ignore="Autofill" />
+    </LinearLayout>
+
+    <!--end of name layout-->
+
+    <!--Save Button using cardView-->
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:background="#7200ca"
+        app:cardCornerRadius="30dp">
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#7200ca"
+            android:text="@string/save" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <!--finish of save button-->
+
+
+</LinearLayout>

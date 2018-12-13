@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Contract Library</string>
+    <string name="name">Name</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="email">Email</string>
+    <string name="save">save</string>
+</resources>
