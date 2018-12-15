@@ -8,13 +8,14 @@
     android:orientation="vertical"
     tools:context=".AddNewContact">
 
-
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        app:srcCompat="@drawable/contact"
-        tools:ignore="ContentDescription" />
+        android:src="@drawable/contact"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#5a0ae4"/>
 
     <!--Name Layout-->
 
@@ -29,14 +30,17 @@
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            android:src="@drawable/person"
+            android:src="@drawable/ic_name_24dp"
             tools:ignore="ContentDescription" />
 
         <EditText
+            android:id="@+id/contact_name2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="@string/name"
             android:inputType="text"
+            android:textColor="#7200ca"
+            android:textColorHint="#7200ca"
             tools:ignore="Autofill,HardcodedText" />
     </LinearLayout>
 
@@ -55,12 +59,15 @@
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            android:src="@drawable/moibleno"
+            android:src="@drawable/ic_phone_black_24dp"
             tools:ignore="Autofill,ContentDescription,HardcodedText"/>
 
         <EditText
+            android:id="@+id/contact_mobile_no"
             android:layout_width="304dp"
             android:layout_height="50dp"
+            android:textColor="#7200ca"
+            android:textColorHint="#7200ca"
             android:hint="@string/mobile_no"
             android:inputType="phone"
             tools:ignore="Autofill" />
@@ -81,13 +88,16 @@
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            android:src="@drawable/email"
+            android:src="@drawable/ic_email_black_24dp"
             tools:ignore="ContentDescription" />
 
         <EditText
+            android:id="@+id/contact_email"
             android:layout_width="304dp"
             android:layout_height="50dp"
             android:hint="@string/email"
+            android:textColor="#7200ca"
+            android:textColorHint="#7200ca"
             android:inputType="textEmailAddress"
             tools:ignore="Autofill" />
     </LinearLayout>
@@ -110,6 +120,9 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="#7200ca"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textAlignment="center"
             android:text="@string/save" />
 
 

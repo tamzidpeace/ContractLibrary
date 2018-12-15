@@ -18,7 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddNewContact">
+        <activity android:name=".AddNewContact"
+            android:label="Add Contact"
+            android:parentActivityName=".ContractList">
         </activity>
     </application>
 

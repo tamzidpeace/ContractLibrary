@@ -19,7 +19,7 @@ public interface ContactDAO {
     @Delete
     void deleteSingleContact(Contact contact);
 
-    @Query("DELETE FROM contact_library")
+    @Query("DELETE FROM Contact_Library")
     void deleteAllContact();
 
     @Query("SELECT * FROM Contact_Library")

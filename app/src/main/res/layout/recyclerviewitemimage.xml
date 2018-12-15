@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="4dp"
+    android:background="#c188de"
     android:layout_marginTop="2dp"
     android:layout_height="60dp">
 
@@ -13,22 +14,27 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/contact_image"
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@drawable/recyclerviewitem"
-            tools:ignore="ContentDescription" />
+            android:layout_marginRight="2dp"
+            android:src="@drawable/ic_person_black_24dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#5a0ae4"/>
 
         <TextView
             android:id="@+id/contract_name"
             android:textSize="25sp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
             android:paddingTop="15dp"
             android:layout_weight="9"
             android:text="@string/name"
+            android:textColor="#5a0ae4"
             android:paddingLeft="30dp"
             android:textStyle="bold"
             tools:ignore="RtlSymmetry" />

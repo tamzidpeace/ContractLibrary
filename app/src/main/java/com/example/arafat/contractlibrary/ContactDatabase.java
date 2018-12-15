@@ -8,7 +8,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 
-@Database(entities = {Contact.class}, version = 1)
+@Database(entities = {Contact.class}, version = 2)
 public abstract class ContactDatabase extends RoomDatabase {
 
     private static ContactDatabase instance;
@@ -26,7 +26,10 @@ public abstract class ContactDatabase extends RoomDatabase {
                     // creating database
 
                     instance = Room.databaseBuilder(context.getApplicationContext(),
-                            ContactDatabase.class, "contact_database").addCallback(sRoomDatabaseCallback).build();
+                            ContactDatabase.class, "contact_database")
+                            .fallbackToDestructiveMigration()
+                            .addCallback(sRoomDatabaseCallback)
+                            .build();
                 }
             }
         }
@@ -56,12 +59,12 @@ public abstract class ContactDatabase extends RoomDatabase {
         }
 
         @Override
-        protected Void doInBackground(final Void... voids) {
+        protected Void doInBackground(Void... voids) {
 
             mDao.deleteAllContact();
 
             for (int i = 0; i < words.length-1; i++) {
-                Contact contact = new Contact(words[i]);
+                Contact contact = new Contact("Tamzid", "123456", "tamjedpeace@gmail.com");
                 mDao.insertContact(contact);
             }
             return null;

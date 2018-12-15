@@ -11,16 +11,15 @@ public class Contact {
     private int id;
 
     private String contactName;
-    @NonNull
-    private int mobileNo;
-    private int email;
+    private String mobileNo;
+    private String email;
 
     // public contnstructor
 
-    public Contact(String contactName) {
+    public Contact(String contactName, String mobileNo, String email) {
         this.contactName = contactName;
-        /*this.mobileNo = mobileNo;
-        this.email = email;*/
+        this.mobileNo = mobileNo;
+        this.email = email;
     }
 
     // Getter & Setter Methods
@@ -29,7 +28,6 @@ public class Contact {
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
@@ -37,25 +35,21 @@ public class Contact {
     public String getContactName() {
         return contactName;
     }
-
     public void setContactName(String contactName) {
         this.contactName = contactName;
     }
 
-    @NonNull
-    public int getMobileNo() {
+    public String getMobileNo() {
         return mobileNo;
     }
-
-    public void setMobileNo(@NonNull int mobileNo) {
+    public void setMobileNo(String mobileNo) {
         this.mobileNo = mobileNo;
     }
 
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
-
-    public void setEmail(int email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 }

@@ -25,6 +25,10 @@ public class ContactRepository {
         new insertAsyncTask(mContactDao).execute(contact);
     }
 
+    void deleteAllContact() {
+        new deleteAllAsyncTask(mContactDao).execute();
+    }
+
     private static class insertAsyncTask extends AsyncTask<Contact, Void, Void> {
 
         private ContactDAO asyncTaskDao;
@@ -36,6 +40,21 @@ public class ContactRepository {
         @Override
         protected Void doInBackground(Contact... contacts) {
             asyncTaskDao.insertContact(contacts[0]);
+            return null;
+        }
+    }
+
+    private static class deleteAllAsyncTask extends AsyncTask<Contact, Void, Void> {
+
+        private ContactDAO asyncTaskDao;
+
+        deleteAllAsyncTask(ContactDAO mContactDao) {
+            asyncTaskDao = mContactDao;
+        }
+
+        @Override
+        protected Void doInBackground(Contact... contacts) {
+            asyncTaskDao.deleteAllContact();
             return null;
         }
     }
