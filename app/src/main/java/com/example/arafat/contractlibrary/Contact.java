@@ -2,7 +2,6 @@ package com.example.arafat.contractlibrary;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
 
 @Entity(tableName = "Contact_Library")
 public class Contact {
@@ -28,27 +27,23 @@ public class Contact {
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getContactName() {
+    String getContactName() {
         return contactName;
     }
-    public void setContactName(String contactName) {
-        this.contactName = contactName;
-    }
 
-    public String getMobileNo() {
+    String getMobileNo() {
         return mobileNo;
-    }
-    public void setMobileNo(String mobileNo) {
-        this.mobileNo = mobileNo;
     }
 
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }

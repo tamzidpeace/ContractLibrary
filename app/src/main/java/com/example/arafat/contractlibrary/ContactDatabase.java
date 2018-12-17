@@ -39,7 +39,7 @@ public abstract class ContactDatabase extends RoomDatabase {
 
     // creating callback method
 
-    private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback(){
+    private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
 
         @Override
         public void onOpen(@NonNull SupportSQLiteDatabase db) {
@@ -52,22 +52,23 @@ public abstract class ContactDatabase extends RoomDatabase {
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
 
         private final ContactDAO mDao;
-        String[] words = {"dolphin", "crocodile", "cobra"};
+        //String[] words = {"dolphin", "crocodile", "cobra"};
 
-        public PopulateDbAsync(ContactDatabase db) {
+        PopulateDbAsync(ContactDatabase db) {
             mDao = db.contactDAO();
         }
 
         @Override
         protected Void doInBackground(Void... voids) {
 
-            mDao.deleteAllContact();
+            //mDao.deleteAllContact();
 
-            for (int i = 0; i < words.length-1; i++) {
+            /*for (int i = 0; i < words.length-1; i++) {
                 Contact contact = new Contact("Tamzid", "123456", "tamjedpeace@gmail.com");
                 mDao.insertContact(contact);
-            }
+            }*/
             return null;
         }
+
     }
 }

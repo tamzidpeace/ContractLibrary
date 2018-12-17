@@ -6,4 +6,7 @@
     <string name="save">save</string>
     <string name="name2">Name</string>
     <string name="delelte_all">Delelte All</string>
+    <string name="name3">Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email2">Email</string>
 </resources>

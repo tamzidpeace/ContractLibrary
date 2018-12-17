@@ -11,17 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ContractList">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddNewContact"
+
+        <activity
+            android:name=".AddEditNewContact"
             android:label="Add Contact"
-            android:parentActivityName=".ContractList">
+            android:parentActivityName=".MainActivity">
         </activity>
+
+        <activity
+            android:name=".ContactInformation"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
     </application>
 
 </manifest>
